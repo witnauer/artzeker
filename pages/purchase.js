@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Statement() {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,10 +12,10 @@ export default function Statement() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to Artzeker</h1>
+        <h1 className={styles.title}>Purchase an Artzeker Plan</h1>
         <button>
           <Link href="/">
-            <a>Back to Home Page</a>
+            <a>Back Home</a>
           </Link>
         </button>
       </main>

@@ -14,8 +14,8 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to Artzeker</h1>
         <button>
-          <Link href="/statement">
-            <a>Read Statement</a>
+          <Link href="/purchase">
+            <a>Purchase a Plan</a>
           </Link>
         </button>
       </main>
