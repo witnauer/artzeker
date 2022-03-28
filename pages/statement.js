@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function Statement() {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,8 +14,8 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to Artzeker</h1>
         <button>
-          <Link href="/statement">
-            <a>Read Statement</a>
+          <Link href="/">
+            <a>Back to Home Page</a>
           </Link>
         </button>
       </main>
