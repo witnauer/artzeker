@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import AuthContext from '../stores/authContext';
 
 export default function Navbar() {
-  const { user, login, logout } = useContext(AuthContext);
+  const { user, login, logout, authReady } = useContext(AuthContext);
   console.log(user);
   return (
     <div className="">
@@ -19,35 +19,38 @@ export default function Navbar() {
           />
         </div>
         <h1>artzeker</h1>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/pricing">Pricing</Link>
-          </li>
-          <li>
-            <Link href="">Blog</Link>
-          </li>
-          <li>
-            <Link href="">Support</Link>
-          </li>
-          {user && (
+        {authReady && (
+          <ul>
             <li>
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/">Home</Link>
             </li>
-          )}
-          {user && (
-            <li onClick={logout} className="btn">
-              Logout
+            <li>
+              <Link href="/pricing">Pricing</Link>
             </li>
-          )}
-          {!user && (
-            <li onClick={login} className="btn">
-              Login/Signup
+            <li>
+              <Link href="/blog">Blog</Link>
             </li>
-          )}
-        </ul>
+            <li>
+              <Link href="/support">Support</Link>
+            </li>
+            {user && (
+              <li>
+                <Link href="/dashboard">Dashboard</Link>
+              </li>
+            )}
+            {user && <li>{user.email}</li>}
+            {user && (
+              <li onClick={logout} className="btn">
+                Logout
+              </li>
+            )}
+            {!user && (
+              <li onClick={login} className="btn">
+                Login/Signup
+              </li>
+            )}
+          </ul>
+        )}
       </nav>
     </div>
   );
