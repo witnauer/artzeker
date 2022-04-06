@@ -1,14 +1,28 @@
+import { useEffect, useContext } from 'react';
+import styles from '../styles/Dashboard.module.css';
+import AuthContext from '../stores/authContext';
+
 export default function Dashboard() {
+  const { user, authReady } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (authReady) {
+      fetch(
+        '/.netlify/functions/dashboard',
+        user && {
+          headers: {
+            Authorization: 'Bearer ' + user.token.access_token,
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
+  }, [user, authReady]);
+
   return (
     <div className="inner-container">
       <h1>Dashboard</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eos
-        aspernatur illum libero ab voluptates, accusamus corrupti voluptas
-        optio, repudiandae laudantium minima minus, aut repellat architecto!
-        Perferendis quasi saepe obcaecati aspernatur vero, placeat quaerat vitae
-        laborum nam! Qui, ad ipsum.
-      </p>
     </div>
   );
 }

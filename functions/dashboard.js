@@ -27,8 +27,15 @@ exports.handler = async (event, context) => {
     ],
   };
 
+  if (context.clientContext.user) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify(portfolio),
+    };
+  }
+
   return {
-    statusCode: 200,
-    body: JSON.stringify(portfolio),
+    statusCode: 401,
+    body: JSON.stringify({ mssg: 'Please login to view your Dashboard' }),
   };
 };
