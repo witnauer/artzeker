@@ -30,14 +30,23 @@ export default function Navbar() {
             <Link href="">Blog</Link>
           </li>
           <li>
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="">Support</Link>
           </li>
-          <li onClick={logout} className="btn">
-            Logout
-          </li>
-          <li onClick={login} className="btn">
-            Login/Signup
-          </li>
+          {user && (
+            <li>
+              <Link href="/dashboard">Dashboard</Link>
+            </li>
+          )}
+          {user && (
+            <li onClick={logout} className="btn">
+              Logout
+            </li>
+          )}
+          {!user && (
+            <li onClick={login} className="btn">
+              Login/Signup
+            </li>
+          )}
         </ul>
       </nav>
     </div>
