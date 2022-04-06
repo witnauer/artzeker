@@ -1,0 +1,36 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4rem;
+}
+.card {
+  padding: 3rem;
+  border: 0.1rem solid var(--primary);
+  border-radius: 1rem;
+  position: relative;
+}
+.featureList {
+  padding-bottom: 5rem;
+}
+.subBtn {
+  padding: 0.5rem 1.6rem 1rem;
+  width: 80%;
+  text-align: center;
+  border: 0.2rem solid var(--primary);
+  border-radius: 3rem;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.subBtn:hover {
+  background-color: white;
+  color: var(--primary);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}

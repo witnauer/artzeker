@@ -1,16 +1,116 @@
-html,
+:root {
+  --primary: #a244c9;
+  --secondary: #271a4c;
+  --dkbluegray: #6869a8;
+  --alabaster: #e3e4db;
+  --heliotrope: #aea4bf;
+  font-size: 10px;
+}
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Singolare-Light', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 1.6rem;
 }
 
+@font-face {
+  font-family: 'Singolare-Light';
+  src: url('../public/fonts/Singolare-Light.eot');
+  src: url('../public/fonts/Singolare-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('../public/fonts/Singolare-Light.woff') format('woff'),
+    url('../public/fonts/Singolare-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Singolare-Regular';
+  src: url('../public/fonts/Singolare-Regular.eot');
+  src: url('../public/fonts/Singolare-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../public/fonts/Singolare-Regular.woff') format('woff'),
+    url('../public/fonts/Singolare-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Singolare-Black';
+  src: url('../public/fonts/Singolare-Black.eot');
+  src: url('../public/fonts/Singolare-Black.eot?#iefix')
+      format('embedded-opentype'),
+    url('../public/fonts/Singolare-Black.woff') format('woff'),
+    url('../public/fonts/Singolare-Black.woff2') format('woff2');
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Singolare-Black';
+}
+h1 {
+  font-size: 3.6rem;
+  font-family: 'Singolare-Regular';
+}
 a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  color: var(--primary);
+}
 
 * {
   box-sizing: border-box;
+}
+/* navbar */
+nav {
+  margin: 1rem 3rem;
+  display: flex;
+  align-items: center;
+}
+nav h1 {
+  font-family: 'Singolare-Regular';
+  font-size: 4rem;
+  margin: -1rem 0 0 1rem;
+}
+nav ul {
+  margin-left: auto;
+  list-style-type: none;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin-left: 2.4rem;
+  font-family: 'Singolare-Regular';
+}
+nav li.btn {
+  padding: 0.5rem 1.6rem 1rem;
+  border: 0.2rem solid var(--primary);
+  border-radius: 3rem;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+nav li.btn:hover {
+  color: white;
+  background: var(--primary);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+.inner-container {
+  max-width: 120rem;
+  margin: 3rem auto;
+}
+
+/* container */
+/* .shaped-container {
+  background-color: var(--heliotrope);
+  height: 80rem;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+} */
+.logo-holder {
+  background-color: var(--primary);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
