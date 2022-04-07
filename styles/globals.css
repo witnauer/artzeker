@@ -102,15 +102,14 @@ nav li.btn:hover {
   max-width: 120rem;
   margin: 3rem auto;
 }
-
-/* container */
-/* .shaped-container {
-  background-color: var(--heliotrope);
-  height: 80rem;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-} */
 .logo-holder {
   background-color: var(--primary);
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   border-radius: 0.5rem;
+}
+.dashboard-container {
+  padding: 0 3rem;
+}
+.page-container {
+  padding: 0 3rem;
 }

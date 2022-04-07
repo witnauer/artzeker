@@ -1,6 +1,6 @@
 export default function Blog() {
   return (
-    <>
+    <div className="page-container">
       <h1>Blog Home Page</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias sapiente
@@ -27,6 +27,6 @@ export default function Blog() {
         reprehenderit expedita dolor? Tempore sed molestias natus voluptatem
         ipsum.
       </p>
-    </>
+    </div>
   );
 }
