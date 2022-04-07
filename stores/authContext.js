@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 import netlifyIdentity from 'netlify-identity-widget';
-
+import { useRouter } from 'next/router';
 const AuthContext = createContext({
   user: null,
   login: () => {},
@@ -12,16 +12,20 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [authReady, setAuthReady] = useState(false);
 
+  const router = useRouter();
+
   useEffect(() => {
     netlifyIdentity.on('login', (user) => {
       setUser(user);
       netlifyIdentity.close();
+      router.push('/dashboard');
       console.log('login event');
     });
 
     netlifyIdentity.on('logout', () => {
       setUser(null);
       console.log('logout event');
+      // router.push('/');
     });
 
     netlifyIdentity.on('init', (user) => {
