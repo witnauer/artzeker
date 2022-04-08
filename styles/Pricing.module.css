@@ -1,4 +1,5 @@
-.shapedContainer {
+.pageContainer {
+  padding: 0 3rem;
 }
 .cardContainer {
   display: grid;
