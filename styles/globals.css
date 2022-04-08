@@ -17,27 +17,18 @@ body {
 
 @font-face {
   font-family: 'Singolare-Light';
-  src: url('../public/fonts/Singolare-Light.eot');
-  src: url('../public/fonts/Singolare-Light.eot?#iefix')
-      format('embedded-opentype'),
-    url('../public/fonts/Singolare-Light.woff') format('woff'),
-    url('../public/fonts/Singolare-Light.woff2') format('woff2');
+  src: url('../public/fonts/Singolare-Light.woff2') format('woff2'),
+    url('../public/fonts/Singolare-Light.woff') format('woff');
 }
 @font-face {
   font-family: 'Singolare-Regular';
-  src: url('../public/fonts/Singolare-Regular.eot');
-  src: url('../public/fonts/Singolare-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('../public/fonts/Singolare-Regular.woff') format('woff'),
-    url('../public/fonts/Singolare-Regular.woff2') format('woff2');
+  src: url('../public/fonts/Singolare-Regular.woff2') format('woff2'),
+    url('../public/fonts/Singolare-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Singolare-Black';
-  src: url('../public/fonts/Singolare-Black.eot');
-  src: url('../public/fonts/Singolare-Black.eot?#iefix')
-      format('embedded-opentype'),
-    url('../public/fonts/Singolare-Black.woff') format('woff'),
-    url('../public/fonts/Singolare-Black.woff2') format('woff2');
+  src: url('../public/fonts/Singolare-Black.woff2') format('woff2'),
+    url('../public/fonts/Singolare-Black.woff') format('woff');
 }
 h1,
 h2,
