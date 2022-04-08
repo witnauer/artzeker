@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic';
-const DashboardLayout = dynamic(() => import('../../layout/dashboardLayout'));
-// import DashboardLayout from '../../layout/dashboardLayout';
+import DashboardLayout from '../../layout/dashboardLayout';
 import styles from '../../styles/Artworks.module.css';
 
 export default function Artworks() {
