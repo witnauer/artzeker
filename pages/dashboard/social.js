@@ -1,6 +1,6 @@
-import React from 'react';
-import DashboardLayout from '../../layout/dashboardLayout';
-// import styles from '../../styles/Artworks.module.css';
+import dynamic from 'next/dynamic';
+const DashboardLayout = dynamic(() => import('../../layout/dashboardLayout'));
+// import DashboardLayout from '../../layout/dashboardLayout';
 
 export default function Social() {
   return (
@@ -8,7 +8,7 @@ export default function Social() {
       <h2>Social</h2>
       <p>Link your social media accounts here:</p>
       <h4>Facebook</h4>
-      <input type="text" placeholder="https://facebook.com/644tttR$%$erdrEE" />
+      <input type="text" placeholder="facebook url" />
       <p>Lorem ipsum dolor sit amet.</p>
       <h4>Instagram</h4>
       <p>Lorem ipsum dolor sit amet.</p>
