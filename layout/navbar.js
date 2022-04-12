@@ -20,7 +20,9 @@ export default function Navbar() {
             <Link href="/support">Support</Link>
           </li>
           <li>
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="https://dashboard.artzeker.com" passHref={true}>
+              Dashboard
+            </Link>
           </li>
         </ul>
       </nav>
